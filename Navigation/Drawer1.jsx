@@ -16,8 +16,8 @@ function Drawer1() {
   return (
     <NavigationContainer>
       <Drawer.Navigator>
-        <Drawer.Screen name="Screen 1" component={Home} />
-        <Drawer.Screen name="Screen 2" component={Detail} />
+        <Drawer.Screen name="HOME" component={Home} />
+        <Drawer.Screen name="DETAIL" component={Detail} />
       </Drawer.Navigator>
     </NavigationContainer>
   );

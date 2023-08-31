@@ -5,7 +5,7 @@ import {View, Text, StyleSheet, Button} from 'react-native';
 const Detail = ({navigation}) => {
   return (
     <View style={styles.container}>
-      <Text style={{textAlign: 'center'}}>APPINVENTIV</Text>
+      <Text style={{textAlign: 'center', fontWeight: 'bold'}}>HOME SCREEN</Text>
       <Button
         title="Go to Home Screen"
         onPress={() => navigation.navigate('Home')}
