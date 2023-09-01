@@ -6,7 +6,6 @@
  */
 
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import Home from '../component/Home';
@@ -16,12 +15,14 @@ const Tab = createBottomTabNavigator();
 
 const Tab1 = () => {
   return (
-    <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Tab1" component={Home} />
-        <Tab.Screen name="Tab2" component={Detail} />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <Tab.Navigator>
+      <Tab.Screen name="Home" component={Home} options={{headerShown: false}} />
+      <Tab.Screen
+        name="Detail"
+        component={Detail}
+        options={{headerShown: false}}
+      />
+    </Tab.Navigator>
   );
 };
 export default Tab1;

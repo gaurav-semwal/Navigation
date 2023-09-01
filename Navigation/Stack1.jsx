@@ -6,21 +6,32 @@
  */
 
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import Home from '../component/Home';
 import Detail from '../component/Detail';
+import Tab1 from './Tab1';
 const Stack = createNativeStackNavigator();
 
 function Stack1() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Details" component={Detail} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Main Screen"
+        component={Tab1}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Home"
+        component={Home}
+        options={{headerShown: true}}
+      />
+      <Stack.Screen
+        name="Details"
+        component={Detail}
+        options={{headerShown: true}}
+      />
+    </Stack.Navigator>
   );
 }
 

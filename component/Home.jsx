@@ -7,10 +7,11 @@ const Home = ({navigation}) => {
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <Text style={{textAlign: 'center', fontWeight: 'bold'}}>
-          DETAIL SCREEN
+          HOME SCREEN
         </Text>
+
         <Button
-          title="Go to Details Screen"
+          title="Go to Detail Screen"
           onPress={() => navigation.navigate('Details')}
         />
       </View>
