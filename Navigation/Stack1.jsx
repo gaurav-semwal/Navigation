@@ -10,6 +10,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import Home from '../component/Home';
 import Detail from '../component/Detail';
+import Api from './API';
 import Tab1 from './Tab1';
 const Stack = createNativeStackNavigator();
 
@@ -31,6 +32,7 @@ function Stack1() {
         component={Detail}
         options={{headerShown: true}}
       />
+      <Stack.Screen name="API" component={Api} options={{headerShown: true}} />
     </Stack.Navigator>
   );
 }

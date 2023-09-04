@@ -10,6 +10,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import Home from '../component/Home';
 import Detail from '../component/Detail';
+import Api from './API';
 
 const Tab = createBottomTabNavigator();
 
@@ -18,10 +19,11 @@ const Tab1 = () => {
     <Tab.Navigator>
       <Tab.Screen name="Home" component={Home} options={{headerShown: false}} />
       <Tab.Screen
-        name="Detail"
+        name="Sign_Up"
         component={Detail}
         options={{headerShown: false}}
       />
+      <Tab.Screen name="API" component={Api} options={{headerShown: false}} />
     </Tab.Navigator>
   );
 };
