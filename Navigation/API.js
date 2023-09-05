@@ -32,7 +32,6 @@ const Api = () => {
             <Text style={styles.itemBody}>Body: {item.body}</Text>
           </View>
         )}
-        keyExtractor={item => item.id.toString()}
       />
     </SafeAreaView>
   );
@@ -41,7 +40,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    backgroundColor: '#F4F4F4',
+    backgroundColor: '#3498db',
   },
   title: {
     fontSize: 40,

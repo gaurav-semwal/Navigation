@@ -1,8 +1,7 @@
-/* eslint-disable react/no-unstable-nested-components */
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createDrawerNavigator} from '@react-navigation/drawer';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {StyleSheet} from 'react-native';
 import Home from '../component/Home';
 import Detail from '../component/Detail';
 import Stack1 from './Stack1';
@@ -10,46 +9,10 @@ import Api from './API';
 
 const Drawer = createDrawerNavigator();
 
-const CustomDrawerContent = ({navigation}) => {
-  const navigateToScreen = screenName => {
-    navigation.navigate(screenName);
-  };
-
-  return (
-    <View style={styles.drawerContainer}>
-      <View style={styles.drawerHeader}>
-        <Text style={styles.drawerHeaderText}>APPINVENTIV</Text>
-      </View>
-      <TouchableOpacity
-        style={styles.drawerItem}
-        onPress={() => navigateToScreen('APPINVENTIV')}>
-        <Text style={styles.drawerItemText}>APPINVENTIV</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.drawerItem}
-        onPress={() => navigateToScreen('HOME')}>
-        <Text style={styles.drawerItemText}>HOME</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.drawerItem}
-        onPress={() => navigateToScreen('SIGN UP')}>
-        <Text style={styles.drawerItemText}>SIGN UP</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.drawerItem}
-        onPress={() => navigateToScreen('API')}>
-        <Text style={styles.drawerItemText}>API</Text>
-      </TouchableOpacity>
-    </View>
-  );
-};
-
-function Drawer1() {
+const Drawer1 = () => {
   return (
     <NavigationContainer>
-      <Drawer.Navigator
-        drawerContent={props => <CustomDrawerContent {...props} />}
-        drawerStyle={styles.drawer}>
+      <Drawer.Navigator drawerStyle={styles.drawer}>
         <Drawer.Screen name="APPINVENTIV" component={Stack1} />
         <Drawer.Screen name="HOME" component={Home} />
         <Drawer.Screen name="SIGN UP" component={Detail} />
@@ -57,7 +20,7 @@ function Drawer1() {
       </Drawer.Navigator>
     </NavigationContainer>
   );
-}
+};
 
 const styles = StyleSheet.create({
   drawer: {

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unstable-nested-components */
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -20,12 +21,16 @@ function Stack1() {
       <Stack.Screen
         name="Main Screen"
         component={Tab1}
-        options={{headerShown: false}}
+        options={{
+          headerShown: false,
+        }}
       />
       <Stack.Screen
         name="Home"
         component={Home}
-        options={{headerShown: true}}
+        options={{
+          headerShown: true,
+        }}
       />
       <Stack.Screen
         name="Details"
