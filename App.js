@@ -1,19 +1,11 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
-import Drawer1 from './Navigation/Drawer1';
+// import Stack2Navigator from './Navigation/2StackNavigator';
+// import StackNavigator from './Navigation/StackNavigator';
+// import Stack1 from './Navigation/Stack1';
+import Stack3Navigator from './Navigation/Stack3Navigator';
 
 const App = () => {
-  return (
-    <>
-      <Drawer1 />
-    </>
-  );
+  return <Stack3Navigator />;
 };
 
 export default App;
