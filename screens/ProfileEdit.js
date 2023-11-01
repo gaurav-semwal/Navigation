@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, TextInput, SafeAreaView, StyleSheet} from 'react-native';
-import {ProfileIcon} from '../assets/svgs';
+import {ProfileIcon} from '../asset';
 
 const ProfileEdit = () => {
   return (

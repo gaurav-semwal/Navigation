@@ -1,10 +1,11 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Home from '../component/Error';
 import {Booked} from '../asset';
 import {Heart} from '../asset';
 import {Profile} from '../asset';
 import {Maison} from '../asset';
+// import ProfileEdit from '../component/ProfileEdit';
+import ProfileScreen from '../screens/ProfileScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -18,31 +19,31 @@ const TabNavigator = () => {
     <Tab.Navigator>
       <Tab.Screen
         name="Home"
-        component={Home}
+        component={ProfileScreen}
         options={{
           headerShown: false,
           tabBarIcon: HomeTabIcon,
         }}
       />
       <Tab.Screen
-        name="Booked"
-        component={Home}
-        options={{
-          headerShown: false,
-          tabBarIcon: SavedTabIcon,
-        }}
-      />
-      <Tab.Screen
-        name="Saved"
-        component={Home}
+        name="Profile Edit"
+        component={ProfileScreen}
         options={{
           headerShown: false,
           tabBarIcon: BookedTabIcon,
         }}
       />
       <Tab.Screen
+        name="Saved"
+        component={ProfileScreen}
+        options={{
+          headerShown: false,
+          tabBarIcon: SavedTabIcon,
+        }}
+      />
+      <Tab.Screen
         name="Profile"
-        component={Home}
+        component={ProfileScreen}
         options={{
           headerShown: false,
           tabBarIcon: ProfileTabIcon,

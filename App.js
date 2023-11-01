@@ -1,11 +1,11 @@
 import React from 'react';
-// import Stack2Navigator from './Navigation/2StackNavigator';
-// import StackNavigator from './Navigation/StackNavigator';
-// import Stack1 from './Navigation/Stack1';
-import Stack3Navigator from './Navigation/Stack3Navigator';
+// import Amenities from './screens/ProfilePage';
+// import DashBoard from './screens/DashBoard';
+import Card2 from './component/Card2';
+import DashBoard from './screens/DashBoard';
 
 const App = () => {
-  return <Stack3Navigator />;
+  return <DashBoard />;
 };
 
 export default App;

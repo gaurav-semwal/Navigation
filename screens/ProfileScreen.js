@@ -8,7 +8,9 @@ import {
 } from 'react-native';
 // import ProfileEdit from './ProfileEdit';
 import {useNavigation} from '@react-navigation/native';
-import {Avatar, Navigate, ProfileIcon} from '../assets/svgs';
+import {Avatar} from '../asset';
+import {ProfileIcon} from '../asset';
+import {Navigate} from '../asset';
 
 const ProfileScreen = () => {
   const navigation = useNavigation();
@@ -16,7 +18,9 @@ const ProfileScreen = () => {
   const handlePress = menuItem => {
     console.log(`Pressed ${menuItem}`);
     if (menuItem === 'Profile') {
-      navigation.navigate('Profile');
+      navigation.navigate('ProfileEdit');
+    } else {
+      navigation.navigate('Error');
     }
   };
 
@@ -25,7 +29,7 @@ const ProfileScreen = () => {
       <View style={styles.profileContainer}>
         <ProfileIcon />
         <View style={styles.profileInfo}>
-          <Text style={styles.profileName}>Sam Semwal</Text>
+          <Text style={styles.profileName}>Gaurav Semwal</Text>
           <Text style={styles.profileNumber}>+91 9138139660</Text>
         </View>
       </View>

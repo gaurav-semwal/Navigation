@@ -9,7 +9,7 @@ import {
 import LinearGradient from 'react-native-linear-gradient';
 import {Image} from '../asset';
 
-const Home = () => {
+const Error = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Image style={styles.image} />
@@ -75,4 +75,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Home;
+export default Error;
